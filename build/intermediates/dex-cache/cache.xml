@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\pocketsphinx-android-0.8-nolib.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="79e72ad97c6001aa89f3a250970615d92eb05fb8">
+        <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\pocketsphinx-android-0.8-nolib-eff0b29d0425db8b2cd2fbcd619e479c39663d3a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\vrtoolkit.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44780939f288867bf44f543a68ce842630f33376">
+        <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\vrtoolkit-dccb56889dadc141041d0eac4f94877b2be9cdea.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\unitycardboardactivity.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9a652615711090f7f143e67426f6c26902748abe">
+        <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\unitycardboardactivity-fb5f64c0e022565963737f8180af4d5631385e62.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\libprotobuf-java-2.6-nano.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a8da6ef10db6269cb7a60328037130f36004754a">
+        <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\libprotobuf-java-2.6-nano-c42d53514a59b4b12ace91b1c3846e3267ff9823.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\unity-classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f13fecbb46f9a421214712421e31c5fa11fca108">
+        <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\unity-classes-aa1803313ecc1f3bd5b43c24bc4fac99ae88ba0b.jar" />
+    </item>
+
+</items>

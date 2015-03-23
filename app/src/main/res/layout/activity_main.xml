@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/mainApp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Unity!"
+        android:id="@+id/start_Button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="test"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause!"
+        android:id="@+id/pause_Button"
+        android:onClick="pause"
+        android:clickable="true"
+        android:layout_alignTop="@+id/start_Button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/start_Button"
+        android:layout_toEndOf="@+id/start_Button" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play!"
+        android:id="@+id/play_Button"
+        android:onClick="play"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/start_Button"
+        android:layout_toLeftOf="@+id/start_Button" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:id="@+id/toSettings_Button"
+        android:onClick="segue"
+        android:clickable="true"
+        android:layout_marginTop="340dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="Start Listening"
+        android:id="@+id/speechService_Button"
+        android:onClick="startService"
+        android:clickable="true"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="Stop Listening"
+        android:id="@+id/speechStop_Button"
+        android:onClick="stopService"
+        android:clickable="true"
+        android:layout_marginTop="280dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

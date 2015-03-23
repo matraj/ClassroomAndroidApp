@@ -1,0 +1,145 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:17:1
+	package
+		ADDED from AndroidManifest.xml:17:120
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		ADDED from AndroidManifest.xml:17:70
+	android:versionCode
+		ADDED from AndroidManifest.xml:17:96
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:17:11
+	android:installLocation
+		ADDED from AndroidManifest.xml:17:147
+uses-feature#0x00020000
+ADDED from AndroidManifest.xml:18:5
+	android:glEsVersion
+		ADDED from AndroidManifest.xml:18:19
+uses-permission#android.permission.NFC
+ADDED from AndroidManifest.xml:19:5
+	android:name
+		ADDED from AndroidManifest.xml:19:22
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:20:5
+	android:name
+		ADDED from AndroidManifest.xml:20:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:21:5
+	android:name
+		ADDED from AndroidManifest.xml:21:22
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from AndroidManifest.xml:22:5
+	android:name
+		ADDED from AndroidManifest.xml:22:22
+uses-permission#android.permission.VIBRATE
+ADDED from AndroidManifest.xml:23:5
+	android:name
+		ADDED from AndroidManifest.xml:23:22
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:24:5
+	android:name
+		ADDED from AndroidManifest.xml:24:22
+application
+ADDED from AndroidManifest.xml:25:5
+	android:label
+		ADDED from AndroidManifest.xml:25:52
+	android:debuggable
+		ADDED from AndroidManifest.xml:25:85
+	android:icon
+		ADDED from AndroidManifest.xml:25:18
+	android:theme
+		ADDED from AndroidManifest.xml:25:141
+	android:name
+		ADDED from AndroidManifest.xml:25:111
+activity#com.Example.room.MainActivity
+ADDED from AndroidManifest.xml:27:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:29:46
+	android:label
+		ADDED from AndroidManifest.xml:29:13
+	android:name
+		ADDED from AndroidManifest.xml:28:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:30:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:31:17
+	android:name
+		ADDED from AndroidManifest.xml:31:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:33:17
+	android:name
+		ADDED from AndroidManifest.xml:33:27
+activity#com.google.vrtoolkit.cardboard.plugins.unity.UnityCardboardActivity
+ADDED from AndroidManifest.xml:36:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:36:135
+	android:label
+		ADDED from AndroidManifest.xml:36:102
+	android:launchMode
+		ADDED from AndroidManifest.xml:36:173
+	android:configChanges
+		ADDED from AndroidManifest.xml:36:205
+	android:name
+		ADDED from AndroidManifest.xml:36:19
+intent-filter#com.google.intent.category.CARDBOARD
+ADDED from AndroidManifest.xml:37:13
+category#com.google.intent.category.CARDBOARD
+ADDED from AndroidManifest.xml:40:17
+	android:name
+		ADDED from AndroidManifest.xml:40:27
+meta-data#unityplayer.UnityActivity
+ADDED from AndroidManifest.xml:42:13
+	android:value
+		ADDED from AndroidManifest.xml:42:65
+	android:name
+		ADDED from AndroidManifest.xml:42:24
+activity#com.Example.room.Settings
+ADDED from AndroidManifest.xml:44:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:46:46
+	android:label
+		ADDED from AndroidManifest.xml:46:13
+	android:name
+		ADDED from AndroidManifest.xml:45:13
+activity#com.Example.room.PocketSphinxActivity
+ADDED from AndroidManifest.xml:48:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:50:46
+	android:label
+		ADDED from AndroidManifest.xml:50:13
+	android:name
+		ADDED from AndroidManifest.xml:49:13
+service#com.Example.room.RecognitionService
+ADDED from AndroidManifest.xml:53:9
+	android:name
+		ADDED from AndroidManifest.xml:53:18
+uses-feature#android.hardware.touchscreen
+ADDED from AndroidManifest.xml:64:5
+	android:required
+		ADDED from AndroidManifest.xml:64:63
+	android:name
+		ADDED from AndroidManifest.xml:64:19
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from AndroidManifest.xml:65:5
+	android:required
+		ADDED from AndroidManifest.xml:65:74
+	android:name
+		ADDED from AndroidManifest.xml:65:19
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from AndroidManifest.xml:66:5
+	android:required
+		ADDED from AndroidManifest.xml:66:83
+	android:name
+		ADDED from AndroidManifest.xml:66:19
+uses-sdk
+INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
+	android:targetSdkVersion
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0

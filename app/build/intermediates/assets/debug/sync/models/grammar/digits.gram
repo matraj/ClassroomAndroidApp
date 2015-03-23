@@ -1,0 +1,16 @@
+#JSGF V1.0;
+
+grammar digits;
+
+<digit> = oh    |
+          ummm  |
+          like   |
+          also   |
+          basically   |
+          you know |
+          uhhh  |
+          and  |
+          stop  |
+          so  ;
+
+public <digits> = <digit>+;
