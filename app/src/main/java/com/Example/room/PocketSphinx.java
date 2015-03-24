@@ -144,9 +144,8 @@ public class PocketSphinx implements RecognitionListener{
     @Override
     public void onEndOfSpeech() {
         Log.d(TAG, "onEndofSpeech");
-//        if (DIGITS_SEARCH.equals(recognizer.getSearchName()))
-//                || FORECAST_SEARCH.equals(recognizer.getSearchName()))
-        switchSearch(DIGITS_SEARCH);
+        //if (DIGITS_SEARCH.equals(recognizer.getSearchName()))
+            switchSearch(DIGITS_SEARCH);
     }
 
     private void switchSearch(String searchName) {

@@ -105,6 +105,10 @@ public class PocketSphinxActivity extends Activity implements
 
     public void endPresentation() {
         switchSearch(KWS_SEARCH);
+        recognizer.stop();
+        Toast.makeText(getApplicationContext(), "Audio recorded successfully",
+                Toast.LENGTH_LONG).show();
+        this.onBackPressed();
     }
 
     @Override
