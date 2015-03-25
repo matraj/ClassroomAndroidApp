@@ -121,6 +121,9 @@ public class MainActivity extends Activity implements OnClickListener {
 //                sr.stopListening();
 //                mAudioManager.setStreamMute(AudioManager.STREAM_VOICE_CALL, false);
 //                mAudioManager.setStreamSolo(AudioManager.STREAM_VOICE_CALL, false);
+//                UnityCardboardActivity.getActivity().onBackPressed();
+//                Intent mainIntent = new Intent(MainActivity.this, MainActivity.class);
+//                MainActivity.this.startActivity(mainIntent);
             } else {
 //                speechClass.endPresentation(); //
                 myAudioRecorder.stop();
@@ -257,7 +260,6 @@ public class MainActivity extends Activity implements OnClickListener {
 //                speak2();
                 speechClass.prepareForSpeech();
             } else {
-//                speechClass.prepareForSpeech(); //
                 try {
                     Toast.makeText(getApplicationContext(), "Recording started", Toast.LENGTH_LONG).show();
                     myAudioRecorder.prepare();

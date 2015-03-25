@@ -87,19 +87,20 @@ public class PocketSphinx implements RecognitionListener{
     @Override
     public void onPartialResult(Hypothesis hypothesis) {
         String text = hypothesis.getHypstr();
-
-        Log.d(TAG, "onPartialResult");
-        if (text.equals(KEYPHRASE))
-            switchSearch(MENU_SEARCH);
-        else if (text.equals(STOPPHRASE)) {
-            endPresentation();
-        }
-        else {
-            switchSearch(DIGITS_SEARCH);
+        String[] words = text.split(" ");
+        for (int i=0; i < words.length; i++) {
+            Log.d(TAG, "onPartialResult");
+            if (text.equals(KEYPHRASE))
+                switchSearch(MENU_SEARCH);
+            else if (text.equals(STOPPHRASE)) {
+                endPresentation();
+            }
+            else {
+                switchSearch(DIGITS_SEARCH);
 //            ((TextView) findViewById(R.id.result_text)).setText(text);
-            makeText(activityContext, text, Toast.LENGTH_SHORT).show();
+                makeText(activityContext, text, Toast.LENGTH_SHORT).show();
+            }
         }
-
     }
 
     public void endPresentation() {
@@ -144,7 +145,7 @@ public class PocketSphinx implements RecognitionListener{
     @Override
     public void onEndOfSpeech() {
         Log.d(TAG, "onEndofSpeech");
-        //if (DIGITS_SEARCH.equals(recognizer.getSearchName()))
+        if (DIGITS_SEARCH.equals(recognizer.getSearchName()))
             switchSearch(DIGITS_SEARCH);
     }
 
@@ -168,7 +169,7 @@ public class PocketSphinx implements RecognitionListener{
         recognizer = defaultSetup()
                 .setAcousticModel(new File(modelsDir, "hmm/en-us-semi"))
                 .setDictionary(new File(modelsDir, "dict/cmu07a.dic"))
-                .setRawLogDir(assetsDir).setKeywordThreshold(1e-20f)
+                .setRawLogDir(assetsDir).setKeywordThreshold(1e-0f)
                 .getRecognizer();
         recognizer.addListener(this);
 

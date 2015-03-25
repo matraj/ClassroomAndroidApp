@@ -2,15 +2,7 @@
 
 grammar digits;
 
-<digit> = oh    |
-          ummm  |
-          like   |
-          also   |
-          basically   |
-          you know |
-          uhhh  |
-          and  |
-          stop  |
-          so  ;
+<digit> = loser    |
+          stop  ;
 
 public <digits> = <digit>+;
