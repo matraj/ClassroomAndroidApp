@@ -3,6 +3,8 @@
 grammar digits;
 
 <digit> = loser    |
+          like    |
+          umm    |
           stop  ;
 
 public <digits> = <digit>+;
