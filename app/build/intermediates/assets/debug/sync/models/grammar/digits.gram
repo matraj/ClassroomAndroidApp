@@ -1,10 +1,9 @@
-#JSGF V1.0;
-
-grammar digits;
-
-<digit> = loser    |
-          like    |
-          umm    |
-          stop  ;
-
-public <digits> = <digit>+;
+right /1e-1/
+like /1e-1/
+basically /0.5/
+and /1e-1/
+umm /1e-1/
+uhh /1.0/
+so /1e-1/
+anyway /1e-1/
+stop /1e-1/

@@ -145,7 +145,7 @@ public class PocketSphinx implements RecognitionListener{
     @Override
     public void onEndOfSpeech() {
         Log.d(TAG, "onEndofSpeech");
-        if (DIGITS_SEARCH.equals(recognizer.getSearchName()))
+//        if (DIGITS_SEARCH.equals(recognizer.getSearchName()))
             switchSearch(DIGITS_SEARCH);
     }
 
@@ -169,7 +169,7 @@ public class PocketSphinx implements RecognitionListener{
         recognizer = defaultSetup()
                 .setAcousticModel(new File(modelsDir, "hmm/en-us-semi"))
                 .setDictionary(new File(modelsDir, "dict/cmu07a.dic"))
-                .setRawLogDir(assetsDir).setKeywordThreshold(1e-0f)
+                .setRawLogDir(assetsDir).setKeywordThreshold(1e-20f)
                 .getRecognizer();
         recognizer.addListener(this);
 
@@ -180,7 +180,7 @@ public class PocketSphinx implements RecognitionListener{
         File menuGrammar = new File(modelsDir, "grammar/menu.gram");
         recognizer.addGrammarSearch(MENU_SEARCH, menuGrammar);
         File digitsGrammar = new File(modelsDir, "grammar/digits.gram");
-        recognizer.addGrammarSearch(DIGITS_SEARCH, digitsGrammar);
+        recognizer.addKeywordSearch(DIGITS_SEARCH, digitsGrammar);
         // Create language model search.
 //        File languageModel = new File(modelsDir, "lm/weather.dmp");
 //        recognizer.addNgramSearch(FORECAST_SEARCH, languageModel);
