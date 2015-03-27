@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.google.vrtoolkit.cardboard.plugins.unity.UnityCardboardActivity;
 
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -40,6 +42,8 @@ public class PocketSphinx implements RecognitionListener{
     private HashMap<String, Integer> captions;
     private HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
 
+    public static final String MyPREFS = "MyPref";
+    public static final String myWords = "Words";
     SharedPreferences sharedpreferences;
 
     Context activityContext;
@@ -62,6 +66,7 @@ public class PocketSphinx implements RecognitionListener{
         captions.put(FORECAST_SEARCH, R.string.forecast_caption);
         makeText(activityContext, "Preparing the recognizer", Toast.LENGTH_SHORT).show();
 
+        sharedpreferences = activityContext.getSharedPreferences(MyPREFS, Context.MODE_PRIVATE);
         // Recognizer initialization is a time-consuming and it involves IO,
         // so we execute it in async task
 
@@ -110,9 +115,8 @@ public class PocketSphinx implements RecognitionListener{
 
     public void endPresentation() {
         makeText(activityContext, "STOPPPP Pls", Toast.LENGTH_SHORT).show();
-        ((MyApplication) mainClass.getApplication()).setCrutchWordCount(wordCount);
-//        Editor editor = sharedpreferences.edit();
-
+//        ((MyApplication) mainClass.getApplication()).setCrutchWordCount(wordCount);
+        saveMap(wordCount);
 //        switchSearch(KWS_SEARCH);
         recognizer.stop();
         Toast.makeText(activityContext, "Audio recorded successfully",
@@ -122,6 +126,17 @@ public class PocketSphinx implements RecognitionListener{
         mainClass.stopPresentation();
 //        Intent mainIntent = new Intent(MainActivity.this, MainActivity.class);
 //        MainActivity.this.startActivity(mainIntent);
+    }
+
+    private void saveMap(HashMap<String,Integer> inputMap){
+        if (sharedpreferences != null){
+            JSONObject jsonObject = new JSONObject(inputMap);
+            String jsonString = jsonObject.toString();
+            Editor editor = sharedpreferences.edit();
+            editor.remove(myWords).commit();
+            editor.putString(myWords, jsonString);
+            editor.commit();
+        }
     }
 
     @Override
@@ -176,7 +191,7 @@ public class PocketSphinx implements RecognitionListener{
         recognizer = defaultSetup()
                 .setAcousticModel(new File(modelsDir, "hmm/en-us-semi"))
                 .setDictionary(new File(modelsDir, "dict/cmu07a.dic"))
-                .setRawLogDir(assetsDir).setKeywordThreshold(1e-20f)
+                .setRawLogDir(assetsDir).setKeywordThreshold(1e-0f)
                 .getRecognizer();
         recognizer.addListener(this);
 

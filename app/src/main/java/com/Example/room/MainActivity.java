@@ -27,9 +27,12 @@ import android.widget.Toast;
 
 import com.google.vrtoolkit.cardboard.plugins.unity.UnityCardboardActivity;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 //import java.util.logging.Handler;
@@ -70,6 +73,7 @@ public class MainActivity extends Activity implements OnClickListener {
     public static final String record = "Record";
     public static final String minuteTime = "Minutes";
     public static final String secondTime = "Seconds";
+    public static final String myWords = "Words";
 
     SharedPreferences sharedPreferences;
 
@@ -83,6 +87,7 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
         Log.d("Test Tag" ,"Started main activity");
         startButton = (Button)findViewById(R.id.start_Button);
+        startButton.setEnabled(true);
         playButton = (Button)findViewById(R.id.play_Button);
         pauseButton = (Button)findViewById(R.id.pause_Button);
 
@@ -157,7 +162,7 @@ public class MainActivity extends Activity implements OnClickListener {
 //        myAudioRecorder  = null; //
         Intent mainIntent = new Intent(MainActivity.this, MainActivity.class);
         MainActivity.this.startActivity(mainIntent);
-        crutchWordCount = ((MyApplication) this.getApplication()).getCrutchWordCount();
+//        crutchWordCount = ((MyApplication) this.getApplication()).getCrutchWordCount();
 //        Toast.makeText(getApplicationContext(), "YOUR CRUTCH WORD COUNT: " + crutchWordCount,
 //                Toast.LENGTH_LONG).show();
 //        ((TextView) findViewById(R.id.wordView)).setText(crutchWordCount.toString());
@@ -189,6 +194,7 @@ public class MainActivity extends Activity implements OnClickListener {
         // Here call the start listening method.
 //        speechClass.prepareForSpeech();
 //        crutchWordCount = ((MyApplication) this.getApplication()).getCrutchWordCount();
+        crutchWordCount = loadMap();
         Toast.makeText(getApplicationContext(), "YOUR CRUTCH WORD COUNT: " + crutchWordCount,
                 Toast.LENGTH_LONG).show();
         ((TextView) findViewById(R.id.wordView)).setText("Your word count" + crutchWordCount);
@@ -197,6 +203,26 @@ public class MainActivity extends Activity implements OnClickListener {
 //            mServiceMessenger = null;
 //        }
         //super.onStop();
+    }
+
+    private HashMap<String,Integer> loadMap(){
+        HashMap<String,Integer> outputMap = new HashMap<String,Integer>();
+//        SharedPreferences pSharedPref = getApplicationContext().getSharedPreferences("MyVariables", Context.MODE_PRIVATE);
+        try{
+            if (sharedPreferences != null){
+                String jsonString = sharedPreferences.getString(myWords, (new JSONObject()).toString());
+                JSONObject jsonObject = new JSONObject(jsonString);
+                Iterator<String> keysItr = jsonObject.keys();
+                while(keysItr.hasNext()) {
+                    String key = keysItr.next();
+                    Integer value = (Integer) jsonObject.get(key);
+                    outputMap.put(key, value);
+                }
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return outputMap;
     }
 
 //    private final ServiceConnection mServiceConnection = new ServiceConnection()
@@ -261,7 +287,7 @@ public class MainActivity extends Activity implements OnClickListener {
         Log.d("Test Tag", "Something clicked");
         /*Toast.makeText(getApplicationContext(), "Hopefully starting up Unity!",
                 Toast.LENGTH_SHORT).show();
-*/
+*/      startButton.setEnabled(false);
         int minuteValue = sharedPreferences.getInt(minuteTime, 0);
         int secondValue = sharedPreferences.getInt(secondTime, 5000);
 //        int minuteValue = ((MyApplication) this.getApplication()).getMinuteTime();
