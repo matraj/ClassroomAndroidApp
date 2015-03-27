@@ -1,6 +1,9 @@
 package com.Example.room;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.NumberPicker;
@@ -13,7 +16,7 @@ import android.widget.Toast;
  */
 public class Settings extends Activity{
 
-    public boolean shouldRecord;
+//    public boolean shouldRecord;
 
     private RadioGroup radioOption;
     private RadioButton radioOptionButton;
@@ -21,10 +24,19 @@ public class Settings extends Activity{
     private NumberPicker minutePicker = null;
     private NumberPicker secondPicker = null;
 
+    public static final String MyPREFS = "MyPref";
+    public static final String record = "Record";
+    public static final String minuteTime = "Minutes";
+    public static final String secondTime = "Seconds";
+
+    SharedPreferences sharedPreferences;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+
+        sharedPreferences = getSharedPreferences(MyPREFS, Context.MODE_PRIVATE);
 
         radioOption = (RadioGroup)findViewById(R.id.radioOption);
 
@@ -46,7 +58,7 @@ public class Settings extends Activity{
 
     public void setDefaultSettings() {
         // Set Radio buttons to previous value set by user
-        boolean shouldRecord = ((MyApplication) this.getApplication()).getShouldRecord();
+        boolean shouldRecord = sharedPreferences.getBoolean(record,true);
         if (shouldRecord) {
             radioOption.check(R.id.radioRecord);
             radioOptionButton = (RadioButton)findViewById(R.id.radioRecord);
@@ -58,9 +70,10 @@ public class Settings extends Activity{
         }
 
         // Set timer to previous value set by user
-        int minuteValue = ((MyApplication) this.getApplication()).getMinuteTime()/60000;
+        int minuteValue = sharedPreferences.getInt(minuteTime, 0)/60000;
         minutePicker.setValue(minuteValue);
-        int secondValue = ((MyApplication) this.getApplication()).getSecondTime()/1000;
+
+        int secondValue = sharedPreferences.getInt(secondTime, 5000)/1000;
         secondPicker.setValue(secondValue);
     }
 
@@ -72,19 +85,22 @@ public class Settings extends Activity{
     @Override
     public void onBackPressed(){
         // Save the settings options set by user
+        Editor editor = sharedPreferences.edit();
+
         int selectedId = radioOption.getCheckedRadioButtonId();
         radioOptionButton = (RadioButton)findViewById(selectedId);
         if (radioOptionButton.getId() == R.id.radioRecord){
-            ((MyApplication) this.getApplication()).setShouldRecord(true);
+            editor.putBoolean(record,true);
         } else {
-            ((MyApplication) this.getApplication()).setShouldRecord(false);
+            editor.putBoolean(record,false);
         }
 
-//        int delayTime = secondPicker.getValue()*1000 + minutePicker.getValue()*60000;
-        int minuteTime = minutePicker.getValue() * 60000;
-        int secondTime = secondPicker.getValue() * 1000;
-        ((MyApplication) this.getApplication()).setMinuteTime(minuteTime);
-        ((MyApplication) this.getApplication()).setSecondTime(secondTime);
+        int minute_Time = minutePicker.getValue() * 60000;
+        int second_Time = secondPicker.getValue() * 1000;
+        editor.putInt(minuteTime, minute_Time);
+        editor.putInt(secondTime, second_Time);
+
+        editor.commit();
 
         super.onBackPressed();
     }

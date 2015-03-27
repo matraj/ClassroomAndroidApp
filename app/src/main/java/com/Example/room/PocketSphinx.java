@@ -5,6 +5,8 @@ package com.Example.room;
  */
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
@@ -38,6 +40,8 @@ public class PocketSphinx implements RecognitionListener{
     private HashMap<String, Integer> captions;
     private HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
 
+    SharedPreferences sharedpreferences;
+
     Context activityContext;
     MainActivity mainClass;
 
@@ -57,6 +61,7 @@ public class PocketSphinx implements RecognitionListener{
         captions.put(DIGITS_SEARCH, R.string.digits_caption);
         captions.put(FORECAST_SEARCH, R.string.forecast_caption);
         makeText(activityContext, "Preparing the recognizer", Toast.LENGTH_SHORT).show();
+
         // Recognizer initialization is a time-consuming and it involves IO,
         // so we execute it in async task
 
@@ -106,7 +111,9 @@ public class PocketSphinx implements RecognitionListener{
     public void endPresentation() {
         makeText(activityContext, "STOPPPP Pls", Toast.LENGTH_SHORT).show();
         ((MyApplication) mainClass.getApplication()).setCrutchWordCount(wordCount);
-        switchSearch(KWS_SEARCH);
+//        Editor editor = sharedpreferences.edit();
+
+//        switchSearch(KWS_SEARCH);
         recognizer.stop();
         Toast.makeText(activityContext, "Audio recorded successfully",
                 Toast.LENGTH_LONG).show();

@@ -70,5 +70,16 @@
         android:layout_marginTop="280dp"
         android:layout_centerHorizontal="true"/>
 
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="220dp"
+        android:text="New Tex with a test of text."
+        android:id="@+id/wordView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/speechService_Button"
+        android:layout_alignEnd="@+id/speechService_Button" />
+
 </RelativeLayout>
-<!-- From: file:/Users/knowroaming/Documents/Mat%20Dev/Android/classroom/ClassroomAndroidApp/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/layout/activity_main.xml -->

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/knowroaming/Documents/Mat%20Dev/Android/classroom/ClassroomAndroidApp/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/knowroaming/Documents/Mat%20Dev/Android/classroom/ClassroomAndroidApp/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Unity</string>
     <string name="digits_caption">You may now speak! Say anything and I will try to keep count of your crutch words.</string>
@@ -14,7 +14,7 @@
     <string name="menu_caption">Now say \"presentation\" when your ready to present.</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
-    <!-- From: file:/Users/knowroaming/Documents/Mat%20Dev/Android/classroom/ClassroomAndroidApp/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:style/Theme.Holo">
     </style>

@@ -4,6 +4,7 @@ package com.Example.room;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.media.AudioManager;
@@ -21,6 +22,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.vrtoolkit.cardboard.plugins.unity.UnityCardboardActivity;
@@ -61,8 +63,15 @@ public class MainActivity extends Activity implements OnClickListener {
     private int delayTime = 5000;
     private Handler myHandler = new Handler();
 
-    private int mBindFlag;
-    private Messenger mServiceMessenger;
+//    private int mBindFlag;
+//    private Messenger mServiceMessenger;
+
+    public static final String MyPREFS = "MyPref";
+    public static final String record = "Record";
+    public static final String minuteTime = "Minutes";
+    public static final String secondTime = "Seconds";
+
+    SharedPreferences sharedPreferences;
 
     public String strOfResults = new String();
 
@@ -83,6 +92,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
         checkVoiceRecognition();
         speechClass = new PocketSphinx(MainActivity.this);
+
+        sharedPreferences = getSharedPreferences(MyPREFS, Context.MODE_PRIVATE);
 
         sr = SpeechRecognizer.createSpeechRecognizer(this);
         sr.setRecognitionListener(new listener());
@@ -147,8 +158,9 @@ public class MainActivity extends Activity implements OnClickListener {
         Intent mainIntent = new Intent(MainActivity.this, MainActivity.class);
         MainActivity.this.startActivity(mainIntent);
         crutchWordCount = ((MyApplication) this.getApplication()).getCrutchWordCount();
-        Toast.makeText(getApplicationContext(), "YOUR CRUTCH WORD COUNT: " + crutchWordCount,
-                Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "YOUR CRUTCH WORD COUNT: " + crutchWordCount,
+//                Toast.LENGTH_LONG).show();
+//        ((TextView) findViewById(R.id.wordView)).setText(crutchWordCount.toString());
     }
 
     @Override
@@ -175,8 +187,11 @@ public class MainActivity extends Activity implements OnClickListener {
     public void stopService(View view) {
         // Set at top and call setup method in on create
         // Here call the start listening method.
-        speechClass.prepareForSpeech();
-
+//        speechClass.prepareForSpeech();
+//        crutchWordCount = ((MyApplication) this.getApplication()).getCrutchWordCount();
+        Toast.makeText(getApplicationContext(), "YOUR CRUTCH WORD COUNT: " + crutchWordCount,
+                Toast.LENGTH_LONG).show();
+        ((TextView) findViewById(R.id.wordView)).setText("Your word count" + crutchWordCount);
 //        if (mServiceMessenger != null) {
 //            unbindService(mServiceConnection);
 //            mServiceMessenger = null;
@@ -247,14 +262,16 @@ public class MainActivity extends Activity implements OnClickListener {
         /*Toast.makeText(getApplicationContext(), "Hopefully starting up Unity!",
                 Toast.LENGTH_SHORT).show();
 */
-        int minuteValue = ((MyApplication) this.getApplication()).getMinuteTime();
-        int secondValue = ((MyApplication) this.getApplication()).getSecondTime();
+        int minuteValue = sharedPreferences.getInt(minuteTime, 0);
+        int secondValue = sharedPreferences.getInt(secondTime, 5000);
+//        int minuteValue = ((MyApplication) this.getApplication()).getMinuteTime();
+//        int secondValue = ((MyApplication) this.getApplication()).getSecondTime();
         delayTime = minuteValue + secondValue;
         Toast.makeText(getApplicationContext(), "Presentation Time: " + delayTime,
                 Toast.LENGTH_SHORT).show();
 
         myHandler.postDelayed(closeControls, delayTime);
-            boolean shoudRecord = ((MyApplication) this.getApplication()).getShouldRecord();
+            boolean shoudRecord = sharedPreferences.getBoolean(record,true);
 
             if (!shoudRecord) {
 //                speak2();

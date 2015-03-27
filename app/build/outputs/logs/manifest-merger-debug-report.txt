@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:17:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:17:11
 	package
 		ADDED from AndroidManifest.xml:17:120
 		INJECTED from AndroidManifest.xml:0:0
@@ -13,6 +11,8 @@ ADDED from AndroidManifest.xml:17:1
 		ADDED from AndroidManifest.xml:17:96
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:17:11
 	android:installLocation
 		ADDED from AndroidManifest.xml:17:147
 uses-feature#0x00020000
@@ -79,12 +79,12 @@ ADDED from AndroidManifest.xml:36:9
 		ADDED from AndroidManifest.xml:36:135
 	android:label
 		ADDED from AndroidManifest.xml:36:102
+	android:launchMode
+		ADDED from AndroidManifest.xml:36:173
 	android:configChanges
 		ADDED from AndroidManifest.xml:36:205
 	android:name
 		ADDED from AndroidManifest.xml:36:19
-	android:launchMode
-		ADDED from AndroidManifest.xml:36:173
 intent-filter#com.google.intent.category.CARDBOARD
 ADDED from AndroidManifest.xml:37:13
 category#com.google.intent.category.CARDBOARD
@@ -93,10 +93,10 @@ ADDED from AndroidManifest.xml:40:17
 		ADDED from AndroidManifest.xml:40:27
 meta-data#unityplayer.UnityActivity
 ADDED from AndroidManifest.xml:42:13
-	android:name
-		ADDED from AndroidManifest.xml:42:24
 	android:value
 		ADDED from AndroidManifest.xml:42:65
+	android:name
+		ADDED from AndroidManifest.xml:42:24
 activity#com.Example.room.Settings
 ADDED from AndroidManifest.xml:44:9
 	android:screenOrientation
