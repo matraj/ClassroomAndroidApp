@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="#d7dbd8db">
 
     <Button
         android:layout_width="wrap_content"
@@ -30,25 +31,35 @@
 
     <RadioGroup
         android:id="@+id/radioOption"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="440dp"
+        android:orientation="horizontal">
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="185dp"
             android:layout_height="wrap_content"
             android:text="Record Me"
             android:id="@+id/radioRecord"
             android:checked="true"
-            android:layout_marginTop="440dp"/>
+            android:padding="5dp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/rbtn_selector"
+            android:textColor="@drawable/rbtn_textcolor_selector" />
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Recognize Me"
             android:id="@+id/radioRecognize"
             android:checked="false"
-            android:layout_below="@+id/radioRecord"/>
+            android:padding="5dp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/rbtn_selector"
+            android:textColor="@drawable/rbtn_textcolor_selector" />
     </RadioGroup>
 
     <NumberPicker

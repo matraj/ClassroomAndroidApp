@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/mainApp">
+    android:id="@+id/mainApp"
+    android:background="#ff6e6e6e">
 
     <Button
         android:layout_width="wrap_content"
@@ -50,15 +51,15 @@
         android:layout_marginTop="340dp"
         android:layout_centerHorizontal="true"/>
 
-    <Button
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:text="Start Listening"
-        android:id="@+id/speechService_Button"
-        android:onClick="startService"
-        android:clickable="true"
-        android:layout_marginTop="220dp"
-        android:layout_centerHorizontal="true"/>
+    <!--<Button-->
+        <!--android:layout_width="400dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Start Listening"-->
+        <!--android:id="@+id/speechService_Button"-->
+        <!--android:onClick="startService"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_marginTop="220dp"-->
+        <!--android:layout_centerHorizontal="true"/>-->
 
     <Button
         android:layout_width="400dp"
@@ -78,7 +79,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/speechService_Button"
-        android:layout_alignEnd="@+id/speechService_Button" />
+        android:layout_alignRight="@+id/speechStop_Button"
+        android:layout_alignEnd="@+id/speechStop_Button"
+        android:textColor="#d7dbd8db" />
 
 </RelativeLayout>

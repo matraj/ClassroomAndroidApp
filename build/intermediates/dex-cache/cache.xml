@@ -9,6 +9,13 @@
         <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\pocketsphinx-android-0.8-nolib-eff0b29d0425db8b2cd2fbcd619e479c39663d3a.jar" />
     </item>
     <item
+        jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\vrtoolkit.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44780939f288867bf44f543a68ce842630f33376">
+        <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\vrtoolkit-dccb56889dadc141041d0eac4f94877b2be9cdea.jar" />
+    </item>
+    <item
         jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\unitycardboardactivity.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -28,13 +35,6 @@
         revision="20.0.0"
         sha1="79e72ad97c6001aa89f3a250970615d92eb05fb8">
         <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\PocketSpeech\pocketSpeech\app\build\intermediates\pre-dexed\debug\pocketsphinx-android-0.8-nolib-c2ac5b888254e41c0bc9153040f5df6277214eee.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\vrtoolkit.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="44780939f288867bf44f543a68ce842630f33376">
-        <dex dex="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\build\intermediates\pre-dexed\debug\vrtoolkit-dccb56889dadc141041d0eac4f94877b2be9cdea.jar" />
     </item>
     <item
         jar="C:\Users\Mat\Documents\Documents\Matty&apos;s stuff\Programming\Android\ClassRoom\app\libs\unity-classes.jar"

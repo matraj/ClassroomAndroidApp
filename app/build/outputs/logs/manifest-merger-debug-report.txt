@@ -113,10 +113,6 @@ ADDED from AndroidManifest.xml:48:9
 		ADDED from AndroidManifest.xml:50:13
 	android:name
 		ADDED from AndroidManifest.xml:49:13
-service#com.Example.room.RecognitionService
-ADDED from AndroidManifest.xml:53:9
-	android:name
-		ADDED from AndroidManifest.xml:53:18
 uses-feature#android.hardware.touchscreen
 ADDED from AndroidManifest.xml:64:5
 	android:required
