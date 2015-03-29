@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
     private PocketSphinx speechClass;
 
     private Button startButton, recordButton;
-    private Button playButton, pauseButton;
+//    private Button playButton, pauseButton;
 
     protected static AudioManager mAudioManager;
 
@@ -99,8 +99,8 @@ public class MainActivity extends Activity {
         Log.d("Test Tag" ,"Started main activity");
         startButton = (Button)findViewById(R.id.start_Button);
         startButton.setEnabled(true);
-        playButton = (Button)findViewById(R.id.play_Button);
-        pauseButton = (Button)findViewById(R.id.pause_Button);
+//        playButton = (Button)findViewById(R.id.play_Button);
+//        pauseButton = (Button)findViewById(R.id.pause_Button);
 
         // Set up recording
         outputFile = Environment.getExternalStorageDirectory().
@@ -116,7 +116,7 @@ public class MainActivity extends Activity {
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        m = new MediaPlayer();
+//        m = new MediaPlayer();
 //        m.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 //            public void onCompletion(MediaPlayer mp){
 //                isDonePlaying = true;
@@ -194,7 +194,7 @@ public class MainActivity extends Activity {
         crutchWordCount = loadMap();
         Toast.makeText(getApplicationContext(), "YOUR CRUTCH WORD COUNT: " + crutchWordCount,
                 Toast.LENGTH_LONG).show();
-        ((TextView) findViewById(R.id.wordView)).setText("Your word count" + crutchWordCount);
+//        ((TextView) findViewById(R.id.wordView)).setText("Your word count" + crutchWordCount);
     }
 
     private HashMap<String,Integer> loadMap(){
@@ -216,32 +216,32 @@ public class MainActivity extends Activity {
         return outputMap;
     }
 
-    public void play(View view) throws IllegalArgumentException,
-            SecurityException, IllegalStateException, IOException{
-        pauseButton.setEnabled(true);
-        playButton.setEnabled(false);
-        if (!isPaused) {
-            m.setDataSource(outputFile);
-            m.prepare();
-            m.start();
-            Toast.makeText(getApplicationContext(), "Start playing audio", Toast.LENGTH_LONG).show();
-        } else {
-            m.start();
-            Toast.makeText(getApplicationContext(), "Re playing audio", Toast.LENGTH_LONG).show();
-        }
-    }
+//    public void play(View view) throws IllegalArgumentException,
+//            SecurityException, IllegalStateException, IOException{
+//        pauseButton.setEnabled(true);
+//        playButton.setEnabled(false);
+//        if (!isPaused) {
+//            m.setDataSource(outputFile);
+//            m.prepare();
+//            m.start();
+//            Toast.makeText(getApplicationContext(), "Start playing audio", Toast.LENGTH_LONG).show();
+//        } else {
+//            m.start();
+//            Toast.makeText(getApplicationContext(), "Re playing audio", Toast.LENGTH_LONG).show();
+//        }
+//    }
 
     public void segue(View view) {
         Intent intent = new Intent(MainActivity.this, Settings.class);
         startActivity(intent);
     }
 
-    public void pause(View view) {
-        pauseButton.setEnabled(false);
-        playButton.setEnabled(true);
-        m.pause();
-        isPaused = true;
-    }
+//    public void pause(View view) {
+//        pauseButton.setEnabled(false);
+//        playButton.setEnabled(true);
+//        m.pause();
+//        isPaused = true;
+//    }
 
     public void test(View v){
         Log.d("Test Tag", "Something clicked");

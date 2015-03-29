@@ -46,15 +46,15 @@ ADDED from AndroidManifest.xml:24:5
 application
 ADDED from AndroidManifest.xml:25:5
 	android:label
-		ADDED from AndroidManifest.xml:25:52
+		ADDED from AndroidManifest.xml:25:48
 	android:debuggable
-		ADDED from AndroidManifest.xml:25:85
+		ADDED from AndroidManifest.xml:25:81
 	android:icon
 		ADDED from AndroidManifest.xml:25:18
 	android:theme
-		ADDED from AndroidManifest.xml:25:141
+		ADDED from AndroidManifest.xml:25:137
 	android:name
-		ADDED from AndroidManifest.xml:25:111
+		ADDED from AndroidManifest.xml:25:107
 activity#com.Example.room.TabbarActivity
 ADDED from AndroidManifest.xml:26:9
 	android:screenOrientation
@@ -100,63 +100,63 @@ ADDED from AndroidManifest.xml:54:9
 	android:name
 		ADDED from AndroidManifest.xml:55:13
 activity#com.google.vrtoolkit.cardboard.plugins.unity.UnityCardboardActivity
-ADDED from AndroidManifest.xml:67:9
+ADDED from AndroidManifest.xml:58:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:67:135
+		ADDED from AndroidManifest.xml:58:135
 	android:label
-		ADDED from AndroidManifest.xml:67:102
+		ADDED from AndroidManifest.xml:58:102
 	android:launchMode
-		ADDED from AndroidManifest.xml:67:173
+		ADDED from AndroidManifest.xml:58:173
 	android:configChanges
-		ADDED from AndroidManifest.xml:67:205
+		ADDED from AndroidManifest.xml:58:205
 	android:name
-		ADDED from AndroidManifest.xml:67:19
+		ADDED from AndroidManifest.xml:58:19
 intent-filter#com.google.intent.category.CARDBOARD
-ADDED from AndroidManifest.xml:68:13
+ADDED from AndroidManifest.xml:59:13
 category#com.google.intent.category.CARDBOARD
-ADDED from AndroidManifest.xml:71:17
+ADDED from AndroidManifest.xml:62:17
 	android:name
-		ADDED from AndroidManifest.xml:71:27
+		ADDED from AndroidManifest.xml:62:27
 meta-data#unityplayer.UnityActivity
-ADDED from AndroidManifest.xml:73:13
+ADDED from AndroidManifest.xml:64:13
 	android:value
-		ADDED from AndroidManifest.xml:73:65
+		ADDED from AndroidManifest.xml:64:65
 	android:name
-		ADDED from AndroidManifest.xml:73:24
+		ADDED from AndroidManifest.xml:64:24
 activity#com.Example.room.Settings
-ADDED from AndroidManifest.xml:75:9
+ADDED from AndroidManifest.xml:66:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:77:46
+		ADDED from AndroidManifest.xml:68:46
 	android:label
-		ADDED from AndroidManifest.xml:77:13
+		ADDED from AndroidManifest.xml:68:13
 	android:name
-		ADDED from AndroidManifest.xml:76:13
+		ADDED from AndroidManifest.xml:67:13
 activity#com.Example.room.PocketSphinxActivity
-ADDED from AndroidManifest.xml:79:9
+ADDED from AndroidManifest.xml:70:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:81:46
+		ADDED from AndroidManifest.xml:72:46
 	android:label
-		ADDED from AndroidManifest.xml:81:13
+		ADDED from AndroidManifest.xml:72:13
 	android:name
-		ADDED from AndroidManifest.xml:80:13
+		ADDED from AndroidManifest.xml:71:13
 uses-feature#android.hardware.touchscreen
-ADDED from AndroidManifest.xml:95:5
+ADDED from AndroidManifest.xml:86:5
 	android:required
-		ADDED from AndroidManifest.xml:95:63
+		ADDED from AndroidManifest.xml:86:63
 	android:name
-		ADDED from AndroidManifest.xml:95:19
+		ADDED from AndroidManifest.xml:86:19
 uses-feature#android.hardware.touchscreen.multitouch
-ADDED from AndroidManifest.xml:96:5
+ADDED from AndroidManifest.xml:87:5
 	android:required
-		ADDED from AndroidManifest.xml:96:74
+		ADDED from AndroidManifest.xml:87:74
 	android:name
-		ADDED from AndroidManifest.xml:96:19
+		ADDED from AndroidManifest.xml:87:19
 uses-feature#android.hardware.touchscreen.multitouch.distinct
-ADDED from AndroidManifest.xml:97:5
+ADDED from AndroidManifest.xml:88:5
 	android:required
-		ADDED from AndroidManifest.xml:97:83
+		ADDED from AndroidManifest.xml:88:83
 	android:name
-		ADDED from AndroidManifest.xml:97:19
+		ADDED from AndroidManifest.xml:88:19
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 	android:targetSdkVersion

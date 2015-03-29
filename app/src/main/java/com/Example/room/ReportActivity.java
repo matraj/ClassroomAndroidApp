@@ -73,8 +73,7 @@ public class ReportActivity extends Activity {
                     + ((HashMap.Entry<String, Integer>) e).getValue() + "\n";
         }
 
-
-
+        buildStr = buildStr.substring(4);
         ((TextView) findViewById(R.id.crutchWordView)).setText(buildStr);
     }
 

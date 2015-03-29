@@ -7,7 +7,17 @@
     android:background="#d7dbd8db">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="405dp"
+        android:layout_height="50dp"
+        android:background="@drawable/settings_topactionbar"
+        android:id="@+id/back_button"
+        android:layout_marginTop="-4dp"
+        android:layout_marginLeft="-5dp"
+        android:onClick="returnHome"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Easy Presentation"
         android:id="@+id/easy_button"
@@ -15,14 +25,14 @@
         android:onClick="easyModeClicked"
         android:layout_centerHorizontal="true"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Medium Presentation"
         android:id="@+id/medium_button"
         android:layout_below="@+id/easy_button"
         android:layout_centerHorizontal="true"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Hard Presentation"
         android:id="@+id/hard_button"
@@ -31,15 +41,15 @@
 
     <RadioGroup
         android:id="@+id/radioOption"
-        android:layout_width="400dp"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="460dp"
         android:orientation="horizontal">
 
         <RadioButton
             android:layout_width="185dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="Record Me"
             android:id="@+id/radioRecord"
             android:checked="true"
@@ -50,8 +60,8 @@
             android:textColor="@drawable/rbtn_textcolor_selector" />
 
         <RadioButton
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
             android:text="Recognize Me"
             android:id="@+id/radioRecognize"
             android:checked="false"

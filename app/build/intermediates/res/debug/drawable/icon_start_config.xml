@@ -4,5 +4,5 @@
     <item android:drawable="@drawable/button_start"
         android:state_selected="true" />
     <!-- When not selected, you should use bg with white -->
-    <item android:drawable="@drawable/button_start" />
+    <item android:drawable="@drawable/button_start_inactive" />
 </selector><!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/drawable/icon_start_config.xml -->

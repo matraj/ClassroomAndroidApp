@@ -20,7 +20,7 @@
         android:layout_marginTop="0dp"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="60dp"
-        android:text="iConfidence"
+        android:text="iPresent"
         android:textSize="22sp"
         android:id="@+id/titleLbl"
         android:layout_alignParentTop="true"
@@ -39,12 +39,50 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:id="@+id/button"
+        android:text="RECORDING DETAILS"
+        android:textSize="17sp"
+        android:id="@+id/speechDetailsLbl"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:textColor="#ffb9b9b9" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="March 29th, 2015\n\nSpeech Duration: 2:00"
+        android:textSize="12sp"
+        android:id="@+id/speechDetailsView"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="110dp" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:id="@+id/playButton"
+        android:background="@drawable/button_play"
+        android:onClick="play"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="95dp" />
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_pause"
+        android:id="@+id/pauseButton"
+        android:onClick="pause"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="95dp"
+        />
+
+    <View
+        android:layout_marginTop="175dp"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"/>
 </RelativeLayout><!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/layout/activity_record.xml -->

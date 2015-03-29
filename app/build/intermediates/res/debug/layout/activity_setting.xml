@@ -4,7 +4,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Settings"
-    android:background="#d7dbd8db">
+    android:background="#d7494949">
+
+    <Button
+        android:layout_width="405dp"
+        android:layout_height="50dp"
+        android:background="@drawable/settings_topactionbar"
+        android:id="@+id/back_button"
+        android:layout_marginTop="-4dp"
+        android:layout_marginLeft="-5dp"
+        android:onClick="returnHome"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -34,7 +44,7 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="460dp"
         android:orientation="horizontal">
 
         <RadioButton

@@ -91,6 +91,10 @@ public class Settings extends Activity{
                 Toast.LENGTH_LONG).show();
     }
 
+    public void returnHome(View view) {
+        onBackPressed();
+    }
+
     @Override
     public void onBackPressed(){
         // Save the settings options set by user
