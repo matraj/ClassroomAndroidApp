@@ -16,32 +16,55 @@ public final class R {
     }
     public static final class drawable {
         public static final int app_icon=0x7f020000;
-        public static final int rbtn_selector=0x7f020001;
-        public static final int rbtn_textcolor_selector=0x7f020002;
+        public static final int background=0x7f020001;
+        public static final int button_back=0x7f020002;
+        public static final int button_recording=0x7f020003;
+        public static final int button_recording_activestate=0x7f020004;
+        public static final int button_report=0x7f020005;
+        public static final int button_report_activestate=0x7f020006;
+        public static final int button_settings=0x7f020007;
+        public static final int button_start=0x7f020008;
+        public static final int icon_record_config=0x7f020009;
+        public static final int icon_report_config=0x7f02000a;
+        public static final int icon_start_config=0x7f02000b;
+        public static final int rbtn_selector=0x7f02000c;
+        public static final int rbtn_textcolor_selector=0x7f02000d;
+        public static final int splash=0x7f02000e;
     }
     public static final class id {
-        public static final int caption_text=0x7f07000f;
-        public static final int easy_button=0x7f070007;
-        public static final int hard_button=0x7f070009;
+        public static final int appIcon=0x7f070008;
+        public static final int button=0x7f070009;
+        public static final int caption_text=0x7f070016;
+        public static final int crutchWordView=0x7f07000d;
+        public static final int easy_button=0x7f07000e;
+        public static final int hard_button=0x7f070010;
         public static final int mainApp=0x7f070000;
-        public static final int medium_button=0x7f070008;
-        public static final int minutePicker=0x7f07000d;
+        public static final int medium_button=0x7f07000f;
+        public static final int minutePicker=0x7f070014;
         public static final int pause_Button=0x7f070002;
         public static final int play_Button=0x7f070003;
-        public static final int radioOption=0x7f07000a;
-        public static final int radioRecognize=0x7f07000c;
-        public static final int radioRecord=0x7f07000b;
-        public static final int result_text=0x7f070010;
-        public static final int secondPicker=0x7f07000e;
+        public static final int radioOption=0x7f070011;
+        public static final int radioRecognize=0x7f070013;
+        public static final int radioRecord=0x7f070012;
+        public static final int result_text=0x7f070017;
+        public static final int secondPicker=0x7f070015;
+        public static final int speechDetailsLbl=0x7f07000a;
+        public static final int speechDetailsView=0x7f07000b;
         public static final int speechStop_Button=0x7f070005;
         public static final int start_Button=0x7f070001;
+        public static final int titleLbl=0x7f070006;
         public static final int toSettings_Button=0x7f070004;
-        public static final int wordView=0x7f070006;
+        public static final int wordView=0x7f070007;
+        public static final int wordsInterpLbl=0x7f07000c;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_setting=0x7f030001;
-        public static final int main=0x7f030002;
+        public static final int activity_record=0x7f030001;
+        public static final int activity_report=0x7f030002;
+        public static final int activity_setting=0x7f030003;
+        public static final int activity_tabbar=0x7f030004;
+        public static final int main=0x7f030005;
+        public static final int splash_layout=0x7f030006;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

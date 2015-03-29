@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_settings"
+        android:id="@+id/toSettings_Button"
+        android:onClick="segue"
+        android:clickable="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="310dp"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="60dp"
+        android:text="iConfidence"
+        android:textSize="22sp"
+        android:id="@+id/titleLbl"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/appIcon"
+        android:background="@drawable/app_icon"
+        android:layout_alignTop="@+id/titleLbl"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp" />
+</RelativeLayout><!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/layout/activity_record.xml -->
