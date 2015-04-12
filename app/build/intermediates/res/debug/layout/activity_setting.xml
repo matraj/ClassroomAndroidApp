@@ -158,9 +158,9 @@
         android:background="@android:color/darker_gray"/>
 
     <View
-        android:layout_marginTop="138dp"
+        android:layout_marginTop="100dp"
         android:layout_width="fill_parent"
-        android:layout_height="250px"
+        android:layout_height="500px"
         android:background="#d7dbd8db"/>
 
     <NumberPicker
@@ -177,8 +177,8 @@
         android:text=":"
         android:textSize="35sp"
         android:id="@+id/timerColonLbl"
-        android:layout_marginLeft="188dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="164dp"
         android:textColor="#ffffff" />
 
     <NumberPicker
