@@ -51,8 +51,6 @@ ADDED from AndroidManifest.xml:25:5
 		ADDED from AndroidManifest.xml:25:81
 	android:icon
 		ADDED from AndroidManifest.xml:25:18
-	android:theme
-		ADDED from AndroidManifest.xml:25:137
 	android:name
 		ADDED from AndroidManifest.xml:25:107
 activity#com.Example.room.TabbarActivity

@@ -4,7 +4,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Settings"
-    android:background="#d7494949">
+    android:background="#ffffff">
 
     <Button
         android:layout_width="405dp"
@@ -16,40 +16,86 @@
         android:onClick="returnHome"
         android:layout_centerHorizontal="true"/>
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Easy Presentation"
+        android:text="CONTACT US!"
+        android:textSize="17sp"
+        android:id="@+id/contactUsLbl"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="380dp"
+        android:textColor="#ff696969" />
+
+    <View
+        android:layout_marginTop="405dp"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Questions? Issues? Feedback?"
+        android:textSize="15sp"
+        android:id="@+id/questionsLbl"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="425dp"
+        android:textColor="#ffb9b9b9" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Send an Email"
         android:id="@+id/easy_button"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="450dp"
         android:onClick="easyModeClicked"
-        android:layout_centerHorizontal="true"/>
-    <Button
+        android:layout_centerHorizontal="true"
+        android:background="#d7dbd8db"/>
+    <!--<Button-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Medium Presentation"-->
+        <!--android:id="@+id/medium_button"-->
+        <!--android:layout_below="@+id/easy_button"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+    <!--<Button-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hard Presentation"-->
+        <!--android:id="@+id/hard_button"-->
+        <!--android:layout_below="@+id/medium_button"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medium Presentation"
-        android:id="@+id/medium_button"
-        android:layout_below="@+id/easy_button"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hard Presentation"
-        android:id="@+id/hard_button"
-        android:layout_below="@+id/medium_button"
-        android:layout_centerHorizontal="true" />
+        android:text="PRACTICE MODE"
+        android:textSize="17sp"
+        android:id="@+id/practiceModeLbl"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="265dp"
+        android:textColor="#ff696969" />
+
+    <View
+        android:layout_marginTop="290dp"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"/>
 
     <RadioGroup
         android:id="@+id/radioOption"
-        android:layout_width="400dp"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="310dp"
         android:orientation="horizontal">
 
         <RadioButton
             android:layout_width="185dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="Record Me"
             android:id="@+id/radioRecord"
             android:checked="true"
@@ -60,8 +106,8 @@
             android:textColor="@drawable/rbtn_textcolor_selector" />
 
         <RadioButton
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
             android:text="Recognize Me"
             android:id="@+id/radioRecognize"
             android:checked="false"
@@ -72,20 +118,75 @@
             android:textColor="@drawable/rbtn_textcolor_selector" />
     </RadioGroup>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPEECH DURATION"
+        android:textSize="17sp"
+        android:id="@+id/speechDurationLbl"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="65dp"
+        android:textColor="#ff696969" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min"
+        android:textSize="17sp"
+        android:id="@+id/minLbl"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="115dp"
+        android:textColor="#ff696969" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sec"
+        android:textSize="17sp"
+        android:id="@+id/secLbl"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="115dp"
+        android:textColor="#ff696969" />
+
+    <View
+        android:layout_marginTop="90dp"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"/>
+
+    <View
+        android:layout_marginTop="138dp"
+        android:layout_width="fill_parent"
+        android:layout_height="250px"
+        android:background="#d7dbd8db"/>
+
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/minutePicker"
 
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="100dp"
-        />
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textSize="35sp"
+        android:id="@+id/timerColonLbl"
+        android:layout_marginLeft="188dp"
+        android:layout_marginTop="155dp"
+        android:textColor="#ffffff" />
+
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/secondPicker"
 
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="200dp"
         />
     <!--android:descendantFocusability="blocksDescendants"-->

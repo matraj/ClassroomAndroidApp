@@ -64,7 +64,8 @@
         android:id="@+id/speechDetailsView"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="100dp" />
+        android:layout_marginTop="100dp"
+        android:textColor="#fff5f5f5" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,5 +91,6 @@
         android:id="@+id/crutchWordView"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="200dp" />
+        android:layout_marginTop="200dp"
+        android:textColor="#fff5f5f5" />
 </RelativeLayout><!-- From: file:/C:/Users/Mat/Documents/Documents/Matty's%20stuff/Programming/Android/ClassRoom/app/src/main/res/layout/activity_report.xml -->
