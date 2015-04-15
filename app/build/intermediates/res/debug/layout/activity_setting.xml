@@ -36,11 +36,12 @@
         android:background="@android:color/darker_gray"/>
 
     <View
-        android:layout_marginTop="175dp"
+        android:layout_marginTop="140dp"
         android:layout_width="fill_parent"
         android:layout_height="150px"
         android:background="#d7dbd8db"/>
 
+    <!--TODO SET BACKGROUD TO WHITE FOR TEXTVIEW TO COVER NUMBERPICKER TOP NUMBER-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,9 +49,10 @@
         android:textSize="17sp"
         android:id="@+id/minLbl"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="125dp"
-        android:textColor="#ff696969" />
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="110dp"
+        android:textColor="#ff696969"
+        android:background="#ffffff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,16 +61,22 @@
         android:textSize="17sp"
         android:id="@+id/secLbl"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="185dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="110dp"
         android:textColor="#ff696969" />
+
+    <!--<View-->
+        <!--android:layout_marginTop="325dp"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50px"-->
+        <!--android:background="#ffffff"/>-->
 
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/minutePicker"
 
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="75dp"
         android:layout_marginLeft="90dp"/>
 
     <TextView
@@ -78,7 +86,7 @@
         android:textSize="35sp"
         android:id="@+id/timerColonLbl"
         android:layout_marginLeft="177dp"
-        android:layout_marginTop="174dp"
+        android:layout_marginTop="139dp"
         android:textColor="#ffffff" />
 
     <NumberPicker
@@ -86,9 +94,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/secondPicker"
 
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="75dp"
         android:layout_marginLeft="210dp"
         />
+
+    <!--TODO PUT A WHITE VIEW HERE TO COVER THE NUMBERPICKER BOTTOM NUMBER-->
 
     <!--PRACTICE MODE-->
     <TextView
@@ -99,11 +109,11 @@
         android:id="@+id/practiceModeLbl"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="285dp"
+        android:layout_marginTop="245dp"
         android:textColor="#ff696969" />
 
     <View
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="270dp"
         android:layout_width="fill_parent"
         android:layout_height="1px"
         android:background="@android:color/darker_gray"/>
@@ -113,7 +123,7 @@
         android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="290dp"
         android:orientation="horizontal">
 
         <RadioButton
